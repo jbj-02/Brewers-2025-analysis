@@ -1,0 +1,29 @@
+[project]
+name = "brewers-2025-analysis"
+version = "0.1.0"
+description = "Brewers 2025 analysis: expected vs actual wins, Statcast contact quality, bullpen leverage, defense, sequencing."
+requires-python = ">=3.10"
+dependencies = [
+  "pandas",
+  "numpy",
+  "pyarrow",
+  "duckdb",
+  "pybaseball>=2.2.7",
+  "scikit-learn",
+  "statsmodels",
+  "matplotlib",
+  "plotly",
+  "seaborn",
+  "streamlit",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
+select = ["E","F","I","B","UP","C90"]
